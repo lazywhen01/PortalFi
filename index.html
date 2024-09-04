@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Islet Connect | COIN</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="resources/css/fontawesome.css" />
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="resources/css/googlefont.css" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="resources/css/theme.css" />
+</head>
+
+<body>
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-3">
+      <div class="row col-md-12 flex justify-content-center">
+        <img src="resources/img/logo-islet.webp" style="width: 250px" alt="logo-islet" />
+      </div>
+      <div class="row col-md-12 flex justify-content-center mt-5">
+        <img src="resources/img/logo-coin.webp" style="width: 250px" alt="logo-coin" />
+      </div>
+
+      <div class="px-3 mt-5">
+        <!-- Form -->
+        <form id="client">
+          <!-- Email input -->
+          <div data-mdb-input-init class="form-outline mb-4">
+            <input type="text" id="first_name" class="form-control" required oninput="filled()" />
+            <label class="form-label" for="first_name">First Name</label>
+          </div>
+          <div data-mdb-input-init class="form-outline mb-4">
+            <input type="text" id="last_name" class="form-control" required oninput="filled()" />
+            <label class="form-label" for="last_name">Last Name</label>
+          </div>
+
+          <div data-mdb-input-init class="form-outline mb-4">
+            <input type="number" id="age" class="form-control" required oninput="filled()" />
+            <label class="form-label" for="age">Age</label>
+          </div>
+
+          <div class="row flex justify-content-center mb-3">
+            <div class="col-3">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="sex" id="male" checked />
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Male
+                </label>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="sex" id="female" />
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Female
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- Submit button -->
+          <button id="submitClient" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4"
+            disabled>
+            Submit
+          </button>
+        </form>
+        <!-- End Form -->
+
+        <div class="oper-section-outer" id="voucher">
+          <div class="oper-section-inner">
+            <span id="oper-hint" style="color: red"></span>
+            <div id="hotspot-section">
+              <select id="hotspot-selector" class="oper-section-item"></select>
+            </div>
+            <!-- Voucher Form -->
+            <form id="login-form">
+              <div id="input-voucher" data-mdb-input-init class="form-outline mb-4">
+                <input id="voucherCode" type="text" class="form-control" />
+                <label class="form-label" for="voucherCode">Voucher Code</label>
+              </div>
+              <div id="input-user">
+                <input id="username" class="oper-section-item input" name="username" type="text"
+                  placeholder="Username" />
+              </div>
+              <div id="input-password" class="user-input">
+                <input id="password" class="oper-section-item input" name="password" type="password"
+                  placeholder="Password" />
+              </div>
+              <div id="input-simple">
+                <input id="simplePassword" class="password oper-section-item" name="simplePassword" type="password"
+                  placeholder="Password" />
+              </div>
+              <div id="input-phone-num">
+                <span class="add">+</span><input id="country-code" class="input" /><input id="phone-number"
+                  class="input" name="phone-number" type="text" placeholder="Phone Number" />
+              </div>
+              <div id="input-verify-code">
+                <input id="verify-code" class="input" name="verify-code" type="text"
+                  placeholder="Verification Code" /><button id="get-code" class="button">
+                  Get Code
+                </button>
+              </div>
+              <input name="clientMac" id="cMac" style="display: none" />
+              <input name="radiusSvrIp" id="radiusServerIp" style="display: none" />
+            </form>
+            <!-- End Voucher Form -->
+            <div id="button-area">
+              <button id="button-facebook" class="button oper-section-item">
+                Facebook
+              </button>
+              <button id="button-login" data-mdb-button-init data-mdb-ripple-init
+                class="btn btn-primary btn-block mb-4">
+                Log In
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3 px-3">
+        <div class="row d-flex align-items-center">
+          <div class="col-4">
+            <img src="resources/img/logo-cvisnet.webp" style="width: 100px" alt="logo-cvisnet" />
+          </div>
+          <div class="col-4">
+            <img src="resources/img/logo-apnic.webp" style="width: 100px" alt="logo-apnic" />
+          </div>
+          <div class="col-4">
+            <img src="resources/img/logo-unconnected.webp" style="width: 100px" alt="logo-unconnected" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="resources/js/demographic.js"></script>
+  <script src="resources/js/index.js"></script>
+  <script src="resources/js/theme.js"></script>
+</body>
+
+</html>
